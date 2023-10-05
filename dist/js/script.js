@@ -1,8 +1,6 @@
 const burger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".overlay");
 const cross = document.querySelector(".cross");
-const socials = document.querySelector(".socials");
-const promo = document.querySelector(".promo");
 
 burger.addEventListener("click", () => {
   overlay.style.left = "0";
@@ -12,4 +10,11 @@ burger.addEventListener("click", () => {
 cross.addEventListener("click", () => {
   overlay.style.left = "-100%";
   overlay.style.top = "-100%";
+});
+
+const percs = document.querySelectorAll(".percent");
+const lines = document.querySelectorAll(".line");
+
+percs.forEach((perc, i) => {
+  lines[i].style.width = perc.innerHTML;
 });
